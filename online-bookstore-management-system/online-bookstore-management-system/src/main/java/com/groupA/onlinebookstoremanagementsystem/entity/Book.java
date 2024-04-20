@@ -1,10 +1,7 @@
 package com.groupA.onlinebookstoremanagementsystem.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @Getter
@@ -12,7 +9,8 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "bookstore")
-public class Bookstore {
+@ToString
+public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -21,7 +19,9 @@ public class Bookstore {
     @Column
     private String author;
     @Column
+    @Enumerated(EnumType.STRING)
     private Genre genre;
+    @Column
     private int price;
 
 }
