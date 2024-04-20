@@ -32,7 +32,7 @@ public class BookstoreController {
         }
     }
 
-    @PostMapping("/adbook")
+    @PostMapping("/addbook")
     Book addBook(@RequestBody Book book) {
         log.info("Adding a book{}", book);
         return service.addBook(book);
