@@ -10,7 +10,7 @@ import java.util.List;
 @org.springframework.stereotype.Service
 @Slf4j
 @RequiredArgsConstructor
-public class Service {
+public class BookstoreService {
     private final BookstoreRepository bookstoreRepository;
 
     public List<Book> findByTitle(String title) {
